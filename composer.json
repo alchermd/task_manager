@@ -1,0 +1,9 @@
+{
+    "name": "Task Manager",
+    "description": "A Todo List implementation using vanilla PHP",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }  
+    }
+}

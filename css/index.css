@@ -1,0 +1,15 @@
+h1 {
+    text-align: center;
+}
+
+table, #addTask {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+td {
+    padding: 2em;
+}
+
