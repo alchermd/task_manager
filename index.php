@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Once properly configured, this line will be:
+ * $query = require_once 'bootstrap.php';
+ * since the $db object is no longer needed for manual SQL queries. 
+ * As for now, the whole bootstrap file is being pulled in.
+ */
 require_once 'bootstrap.php';
 
 /**
