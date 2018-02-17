@@ -9,7 +9,7 @@ class Logger
 {
     /**
      * Logs the object to the screen and halts execution.
-     * 
+     *
      * @param $o - the object to be logged.
      */
     public function log($o)

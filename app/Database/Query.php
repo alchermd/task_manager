@@ -24,20 +24,19 @@ class Query
 
     /**
      * Fetches all the entries from a table.
-     * 
+     *
      * @param $tableName - the name of the table.
      * @param $cls - class name to be used for the fetched data.
      * @return - an array of results.
      */
-    public function all(string $tableName, string $cls=\stdClass) : array
+    public function all(string $tableName, string $cls = \stdClass) : array
     {
         try {
             $statement = $this->db->prepare("SELECT * FROM {$tableName}");
             $statement->execute();
 
             return $statement->fetchAll(\PDO::FETCH_CLASS, $cls);
-        }
-        catch (\Exception $e) {
+        } catch (\Exception $e) {
             $this->logger->log($e->getMessage());
             return [];
         }

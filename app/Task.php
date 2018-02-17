@@ -54,7 +54,7 @@ class Task
     public function complete()
     {
         $this->completed = true;
-        
+
         return this;
     }
 

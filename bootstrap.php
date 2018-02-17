@@ -9,4 +9,3 @@ $config = require 'config.php';
 
 $db = (new Connection(new Logger))->make($config['database']);
 $query = new Query($db, new Logger);
-

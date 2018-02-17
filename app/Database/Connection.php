@@ -21,18 +21,19 @@ class Connection
 
     /**
      * Attempts to create a new PDO connection.
-     * 
+     *
      * @param $config - array of configuration options.
      */
     public function make(array $config) : \PDO
     {
         try {
             return new \PDO(
-                "{$config['connection']};dbname={$config['dbname']}", 
-                $config['username'], $config['password'], $config['options']
+                "{$config['connection']};dbname={$config['dbname']}",
+                $config['username'],
+                $config['password'],
+                $config['options']
             );
-        }
-        catch (\PDOException $e) {
+        } catch (\PDOException $e) {
             $this->logger->log($e->getMessage());
         }
     }
